@@ -24,3 +24,11 @@ def calculate_grade(marks):
         return "D"
     else:
         return "F"
+    
+def print_report():
+    print("\n--- GRADE REPORT ---")
+    for s in students:
+        grade = calculate_grade(s["marks"])
+        print(f"{s['name']} | Marks: {s['marks']} | Grade: {grade}")
+
+print_report()
